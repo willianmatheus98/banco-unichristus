@@ -1,0 +1,16 @@
+"use strict";
+exports.__esModule = true;
+var PessoaJuridica_1 = require("./src/model/PessoaJuridica");
+var PessoaFisica_1 = require("./src/model/PessoaFisica");
+var contaUnichristus = new PessoaJuridica_1.PessoaJuridica('unichristus', '1198198165165');
+var contaAluno1 = new PessoaFisica_1.PessoaFisica("Willian", '1326565165');
+var contaAluno2 = new PessoaFisica_1.PessoaFisica("Matheus", '9181919819', 19);
+contaUnichristus.visualizarSaldo();
+contaUnichristus.depositar(15000);
+contaUnichristus.visualizarSaldo();
+contaUnichristus.transferir(contaAluno1, 1597);
+contaUnichristus.transferir(contaAluno2, 6587);
+contaUnichristus.sacar(1001);
+contaAluno1.visualizarSaldo();
+contaAluno2.visualizarSaldo();
+contaUnichristus.visualizarSaldo();
